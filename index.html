@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find a Restaurant</h1>
+        <form id="restaurant-form">
+            <div class="form-group">
+                <label for="food-item">Food Item:</label>
+                <input type="text" id="food-item" name="food_item" placeholder="e.g., Burger" required>
+            </div>
+            <div class="form-group">
+                <label for="place">Place:</label>
+                <input type="text" id="place" name="place" placeholder="e.g., Kochi">
+            </div>
+            <div class="form-group">
+                <label for="price">Max Price:</label>
+                <input type="number" id="price" name="price" placeholder="e.g., 200">
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('restaurant-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const foodItem = document.getElementById('food-item').value;
+            const place = document.getElementById('place').value;
+            const price = document.getElementById('price').value;
+            
+            // Build the query string for the API
+            let queryString = `results.html?food_item=${encodeURIComponent(foodItem)}`;
+            if (place) {
+                queryString += `&place=${encodeURIComponent(place)}`;
+            }
+            if (price) {
+                queryString += `&price=${encodeURIComponent(price)}`;
+            }
+
+            // Redirect to the results page
+            window.location.href = queryString;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

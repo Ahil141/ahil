@@ -1,0 +1,111 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#67a7dfa9;
+    color: #f2f7f7fc;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(7, 40, 89);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #67a7dfa9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #67a7dfa9;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.result-item {
+    background-color:  #67a7dfa9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.result-item h3 {
+    margin-bottom: 5px;
+}
+
+.result-item p {
+    margin-bottom: 5px;
+}
+
+/* Additional Styles for Details Page */
+#menu-items {
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color:  #67a7dfa9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.menu-item p {
+    margin-bottom: 5px;
+}
+
+#restaurant-details p {
+    margin-bottom: 10px;
+    background-color: rgb(12, 156, 218);
+}
+
+#restaurant-details span {
+    font-weight: bold;
+}
+
+.result-image{
+    border-radius: 30px;
+}
