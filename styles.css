@@ -1,0 +1,169 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; /* Full height for body and html */
+    font-family: Arial, sans-serif;
+    color: #f2f7f7fc;
+}
+
+.background {
+    position: fixed; /* Fix it to the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.png'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    z-index: -1; /* Send it behind other content */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #091066;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    position: relative; /* Ensure it stays above the background */
+    z-index: 1; /* Ensure content is above the background */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #543e0aa9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c38e3fa9;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.result-item {
+    background-color: #543e0aa9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.result-item h3 {
+    margin-bottom: 5px;
+}
+
+.result-item p {
+    margin-bottom: 5px;
+}
+
+/* Additional Styles for Details Page */
+#menu-items {
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color: #D2B48C;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.menu-item p {
+    margin-bottom: 5px;
+}
+
+#restaurant-details p {
+    margin-bottom: 10px;
+    background-color: rgb(12, 156, 218);
+}
+
+#restaurant-details span {
+    font-weight: bold;
+}
+
+.result-image {
+    border-radius: 30px;
+}
+
+.results_background {
+    background-image: url('resultsbackground.jpeg');
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+}
+.details_background{
+    background-image: url('detailsbackground.jpg');
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+}
+.details_container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #A0522D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    position: relative; /* Ensure it stays above the background */
+    z-index: 1; /* Ensure content is above the background */
+}
+.details_button{
+    background-color: #B86B3E;
+}
+.results_container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #502e04;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    position: relative; /* Ensure it stays above the background */
+    z-index: 1; /* Ensure content is above the background */
+}
+.index_button{
+    background-color: #303bb3;
+}
+.index_button:hover{
+    background-color:#434fd3
+}

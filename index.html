@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Finder</title>
+    <link rel="stylesheet" href="newindex.css">
+</head>
+<body>
+    <section class="restaurant-finder">
+        <div class="content-wrapper">
+            <div class="flex-container">
+                <div class="image-column">
+                    <img loading="lazy"
+                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f4740288ee579c635664f1ec9703d6948866fe0ff7c818beab6f93be0e6fabf?placeholderIfAbsent=true&apiKey=f3e0b65f9a6b4ab489f5e106bb8399c0"
+                         class="restaurant-image" alt="Restaurant ambiance"/>
+                </div>
+                <div class="form-column">
+                    <form class="search-form" id="restaurant-form">
+                        <h2 class="form-title">Find a Restaurant</h2>
+                        <div class="form-group">
+                            <label for="food-item" class="form-label">Food Item</label>
+                            <div class="search-input">
+                                <div class="input-content">
+                                    <span class="input-icon" aria-hidden="true"></span>
+                                    <input type="text" id="food-item" class="input-placeholder" placeholder="Enter here"
+                                           aria-label="Enter food item">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="place" class="form-label">Place</label>
+                            <div class="search-input">
+                                <div class="input-content">
+                                    <span class="input-icon" aria-hidden="true"></span>
+                                    <input type="text" id="place" class="input-placeholder" placeholder="Enter here"
+                                           aria-label="Enter place">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="max-price" class="form-label">Max Price</label>
+                            <div class="search-input">
+                                <div class="input-content">
+                                    <span class="input-icon" aria-hidden="true"></span>
+                                    <input type="number" id="max-price" class="input-placeholder" placeholder="Enter here"
+                                           aria-label="Enter maximum price">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-container">
+                            <button type="submit" class="submit-button">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('restaurant-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const foodItem = document.getElementById('food-item').value;
+            const place = document.getElementById('place').value;
+            const price = document.getElementById('max-price').value;
+
+            // Build the query string for the API
+            let queryString = `results.html?food_item=${encodeURIComponent(foodItem)}`;
+            if (place) {
+                queryString += `&place=${encodeURIComponent(place)}`;
+            }
+            if (price) {
+                queryString += `&price=${encodeURIComponent(price)}`;
+            }
+            // Redirect to the results page
+            window.location.href = queryString;
+        });
+    </script>
+</body>
+</html>
